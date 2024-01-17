@@ -7,17 +7,19 @@
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
-    <form class="hanggame-form">
-      <h1 class="hangman-name">Hangman Game</h1>
-      <input class="word-input" type="text" />
+    <div class="hanggame-container">
+      <form class="hanggame-form">
+        <h1 class="hangman-name">Hangman Game</h1>
+        <input class="word-input" type="text" />
 
-      <div class="btn-div">
-        <button class="guess-btn" type="submit">GUESS</button>
-        <button class="restart-btn" type="reset">RESTART</button>
-      </div>
-
+        <div class="btn-div">
+          <button class="guess-btn" type="submit">GUESS</button>
+          <button class="restart-btn" type="button">RESTART</button>
+        </div>
+      </form>
       <span class="word-span"></span>
-    </form>
+    </div>
+
     <script type="module" src="/js/hangman.js"></script>
   </body>
 </html>
