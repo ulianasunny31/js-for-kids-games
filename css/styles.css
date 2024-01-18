@@ -22,10 +22,10 @@ body {
 .hanggame-container {
   background-color: #f7f3ee;
   border-radius: 8px;
-  width: 50%;
-  height: 65%;
+  width: 60%;
+  min-height: 450px;
   margin: 30px auto 0;
-  padding: 80px 80px 30px;
+  padding: 50px 70px 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,10 +38,10 @@ body {
 }
 
 .word-input {
-  width: 130px;
-  height: 35px;
+  width: 45%;
+  height: 25px;
   padding: 10px;
-  font-size: 20px;
+  font-size: 18px;
   border-radius: 3px;
   color: #a76d18;
   font-family: "Covered By Your Grace", cursive;
@@ -49,32 +49,36 @@ body {
 }
 
 .btn-div {
-  flex-direction: row;
-  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 50px;
+  width: 100%;
 }
 
 .guess-btn {
-  width: 100px;
-  height: 35px;
+  width: 40%;
+  height: 30px;
   background-color: #d9904c;
   color: #7a400a;
   border: none;
   border-radius: 4px;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 13px;
   font-family: "Covered By Your Grace", cursive;
   cursor: pointer;
 }
 
 .restart-btn {
-  width: 100px;
-  height: 35px;
+  width: 40%;
+  height: 30px;
   background-color: #f19d8a;
   color: #97260d;
   border: none;
   border-radius: 4px;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 13px;
   font-family: "Covered By Your Grace", cursive;
   cursor: pointer;
 }
@@ -82,29 +86,24 @@ body {
 .hangman-name {
   margin: 0 auto 40px;
   font-family: "Covered By Your Grace", cursive;
-  font-size: 35px;
+  font-size: 20px;
 }
 
 .word-span {
   font-family: "Covered By Your Grace", cursive;
-  font-size: 20px;
-  margin-bottom: 50px;
-}
-
-.span {
+  font-size: 15px;
+  margin-bottom: 60px;
 }
 
 .wrong-letters-span {
   font-family: "Covered By Your Grace", cursive;
-  font-size: 20px;
+  font-size: 18px;
   border: none;
   border-radius: 3px;
-  padding: 10px;
+  padding: 8px;
   min-width: 100px;
   max-width: 100px;
   max-height: 200px;
-  margin-right: auto;
-  margin-left: 0;
 }
 
 .visible {
@@ -113,4 +112,80 @@ body {
 
 .not-visible {
   background-color: #f7f3ee;
+}
+
+/* media hangman */
+
+@media screen and (min-width: 768px) {
+  .hangman-name {
+    font-size: 25px;
+  }
+
+  .word-input {
+    width: 50%;
+    height: 30px;
+    font-size: 19px;
+  }
+
+  .word-span {
+    font-size: 18px;
+  }
+
+  .wrong-letters-span {
+    font-size: 19px;
+    padding: 9px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .hanggame-container {
+    width: 50%;
+    height: 65%;
+    margin: 30px auto 0;
+    padding: 80px 80px 30px;
+  }
+
+  .hanggame-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .word-input {
+    height: 35px;
+    font-size: 20px;
+  }
+
+  .btn-div {
+    flex-direction: row;
+    margin-bottom: 40px;
+    justify-content: center;
+  }
+
+  .guess-btn {
+    width: 100px;
+    height: 35px;
+    font-size: 15px;
+  }
+
+  .restart-btn {
+    width: 100px;
+    height: 35px;
+    font-size: 15px;
+  }
+
+  .hangman-name {
+    margin: 0 auto 40px;
+    font-size: 35px;
+  }
+
+  .word-span {
+    font-size: 20px;
+    margin-bottom: 50px;
+  }
+
+  .wrong-letters-span {
+    font-size: 20px;
+    padding: 9px;
+  }
 }

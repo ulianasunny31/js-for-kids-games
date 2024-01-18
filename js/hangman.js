@@ -58,6 +58,9 @@ function createGameWord() {
   for (let i = 0; i < word.length; i++) {
     answerArr.push("_");
     spanWord.textContent = answerArr.join(" ");
+    wrongLetterSpan.classList.replace(visible, notVisible);
+    wrongLetters = [];
+    wrongLetterSpan.textContent = wrongLetters.join(", ");
   }
 }
 
