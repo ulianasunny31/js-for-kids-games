@@ -1,23 +1,18 @@
-const inputForWords = document.querySelector(".word-input");
-const spanWord = document.querySelector(".word-span");
-const form = document.querySelector(".hanggame-form");
-const restart = document.querySelector(".restart-btn");
+import words from "./words-for-hangman.js";
+import {
+  inputForWords,
+  spanWord,
+  form,
+  restart,
+  wrongLetterSpan,
+} from "./declarations.js";
+
+const notVisible = "not-visible";
+const visible = "visible";
+
 let givenLetter = "";
 
-const words = [
-  "apple",
-  "cat",
-  "university",
-  "flower",
-  "pretty",
-  "football",
-  "song",
-  "lamp",
-  "phone",
-  "table",
-  "dragon",
-];
-let word, answerArr, remainingLetters;
+let word, answerArr, remainingLetters, wrongLetters;
 
 startNewGame();
 
@@ -31,12 +26,20 @@ form.addEventListener("submit", function handleSubmit(e) {
     return;
   }
 
+  let found = false;
   for (let k = 0; k < word.length; k++) {
     if (word[k] === givenLetter && answerArr[k] === "_") {
       answerArr[k] = givenLetter;
       remainingLetters--;
+      found = true;
     }
   }
+
+  if (!found && !wrongLetters.includes(givenLetter)) {
+    wrongLetters.push(givenLetter);
+  }
+  wrongLetterSpan.classList.replace(notVisible, visible);
+  wrongLetterSpan.textContent = wrongLetters.join(", ");
 
   spanWord.textContent = answerArr.join(" ");
 
@@ -61,6 +64,7 @@ function createGameWord() {
 function startNewGame() {
   word = words[Math.floor(Math.random() * words.length)];
   answerArr = [];
+  wrongLetters = [];
   createGameWord();
   remainingLetters = word.length;
 }
