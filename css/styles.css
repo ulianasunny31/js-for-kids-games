@@ -1,15 +1,17 @@
 body {
   background-color: #fffcf8;
-  font-family: "Rowdies", sans-serif;
+  font-family: "Montserrat", sans-serif;
   /* font-family: 'Covered By Your Grace', cursive; */
 }
 
 .project-name {
+  font-family: "Rowdies", sans-serif;
   font-size: 25px;
   color: #23541d;
 }
 
 .project-link {
+  font-family: "Rowdies", sans-serif;
   text-decoration: none;
   border-radius: 8px;
   background-color: #b2ceae;
