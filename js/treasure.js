@@ -91,5 +91,6 @@ function startNewGame() {
   clicks = 0;
   setNewTarget();
   $(".distance").text("");
+  $(".clicks").text("");
   $(".distance").css("background-color", "#f9fcfe");
 }
