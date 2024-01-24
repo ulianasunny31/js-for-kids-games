@@ -4,6 +4,11 @@ body {
   /* font-family: 'Covered By Your Grace', cursive; */
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
 .project-name {
   font-family: "Rowdies", sans-serif;
   font-size: 25px;
@@ -19,7 +24,11 @@ body {
   padding: 5px;
 }
 
-/* Hangman */
+/**
+  |============================
+  | HANGMAN STYLES
+  |============================
+*/
 
 .hanggame-container {
   background-color: #f7f3ee;
@@ -190,4 +199,64 @@ body {
     font-size: 20px;
     padding: 9px;
   }
+}
+
+/**
+  |============================
+  | TREASURE STYLES
+  |============================
+*/
+.tr-body {
+  background-color: #f9fcfe;
+}
+
+.tr-container {
+  max-width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tr-header {
+  font-size: 25px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #0c5495;
+}
+
+.distance {
+  font-size: 20px;
+  border-radius: 4px;
+  padding: 2px;
+  font-weight: 700;
+}
+
+/* Media treasure */
+
+@media screen and (min-width: 768px) {
+  .tr-header {
+    font-size: 30px;
+  }
+
+  .distance {
+    font-size: 25px;
+    padding: 3px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .tr-header {
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+
+  .distance {
+    font-size: 27px;
+  }
+
+  /* .tr-map {
+    width: 450px;
+    height: 450px;
+  } */
 }

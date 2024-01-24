@@ -19,7 +19,6 @@ startNewGame();
 form.addEventListener("submit", function handleSubmit(e) {
   e.preventDefault();
   givenLetter = inputForWords.value;
-  console.log("submitted");
 
   if (!givenLetter || givenLetter === null || givenLetter.length !== 1) {
     alert("Please enter only one character!");
