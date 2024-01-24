@@ -15,6 +15,11 @@ $(mapImage).click(function (evt) {
     alert(`Found the treasure in ${clicks} clicks!`);
     startNewGame();
   }
+
+  if (clicks === 45) {
+    alert("GAME OVER");
+    startNewGame();
+  }
 });
 
 function getRandomNumber(size) {
