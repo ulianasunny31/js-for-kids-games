@@ -1,6 +1,7 @@
 import { mapImage } from "./declarations.js";
 let clicks = 0;
-let target;
+let target, clicksLeft;
+let maxClicks = 45;
 
 startNewGame();
 
@@ -11,12 +12,17 @@ $(mapImage).click(function (evt) {
   let hint = getHint(distance);
   $(".distance").text(hint);
 
+  if (clicks < maxClicks) {
+    clicksLeft = maxClicks - clicks;
+    $(".clicks").text(`Clicks left: ${clicksLeft}`);
+  }
+
   if (distance < 13) {
     alert(`Found the treasure in ${clicks} clicks!`);
     startNewGame();
   }
 
-  if (clicks === 45) {
+  if (clicks === maxClicks) {
     alert("GAME OVER");
     startNewGame();
   }

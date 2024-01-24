@@ -230,6 +230,13 @@ img {
   border-radius: 4px;
   padding: 2px;
   font-weight: 700;
+  margin-bottom: 8px;
+  margin-top: 20px;
+}
+
+.clicks {
+  font-size: 15px;
+  margin: 0;
 }
 
 /* Media treasure */
@@ -242,6 +249,11 @@ img {
   .distance {
     font-size: 25px;
     padding: 3px;
+    margin-bottom: 10px;
+  }
+
+  .clicks {
+    font-size: 17px;
   }
 }
 
@@ -253,10 +265,10 @@ img {
 
   .distance {
     font-size: 27px;
+    margin-bottom: 12px;
   }
 
-  /* .tr-map {
-    width: 450px;
-    height: 450px;
-  } */
+  .clicks {
+    font-size: 20px;
+  }
 }
