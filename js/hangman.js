@@ -16,10 +16,12 @@ let word, answerArr, remainingLetters, wrongLetters;
 
 startNewGame();
 alphabet.addEventListener("touchstart", function touchOnLetter(evt) {
+  evt.preventDefault();
   reactToClick(evt);
 });
 
 alphabet.addEventListener("click", function clickOnLetter(evt) {
+  evt.preventDefault();
   reactToClick(evt);
 });
 
