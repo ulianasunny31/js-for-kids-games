@@ -15,7 +15,7 @@ let givenLetter = "";
 let word, answerArr, remainingLetters, wrongLetters;
 
 startNewGame();
-alphabet.addEventListener("touchend", function touchOnLetter(evt) {
+alphabet.addEventListener("touchstart", function touchOnLetter(evt) {
   reactToClick(evt);
 });
 
