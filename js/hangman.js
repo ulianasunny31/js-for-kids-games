@@ -15,36 +15,12 @@ let givenLetter = "";
 let word, answerArr, remainingLetters, wrongLetters;
 
 startNewGame();
+alphabet.addEventListener("touchend", function touchOnLetter(evt) {
+  reactToClick(evt);
+});
 
-alphabet.addEventListener("click", function clickOnLetter(e) {
-  if (e.target.tagName === "LI") {
-    givenLetter = e.target.textContent.toLowerCase();
-    console.log(givenLetter);
-  }
-
-  let found = false;
-  for (let k = 0; k < word.length; k++) {
-    if (word[k] === givenLetter && answerArr[k] === "_") {
-      answerArr[k] = givenLetter;
-      remainingLetters--;
-      found = true;
-      e.target.classList.add("used");
-    }
-  }
-
-  if (!found && !wrongLetters.includes(givenLetter)) {
-    e.target.classList.add("used");
-  }
-
-  spanWord.textContent = answerArr.join(" ");
-
-  if (remainingLetters === 0) {
-    spanWord.textContent = answerArr.join(" ");
-
-    if (remainingLetters === 0) {
-      alert(`Congratulations! The word was ${word}.`);
-    }
-  }
+alphabet.addEventListener("click", function clickOnLetter(evt) {
+  reactToClick(evt);
 });
 
 restart.addEventListener("click", function handleRestart() {
@@ -74,4 +50,35 @@ function removeClass() {
   liItems.forEach((li) => {
     li.classList.remove("used");
   });
+}
+
+function reactToClick(e) {
+  if (e.target.tagName === "LI") {
+    givenLetter = e.target.textContent.toLowerCase();
+    console.log(givenLetter);
+  }
+
+  let found = false;
+  for (let k = 0; k < word.length; k++) {
+    if (word[k] === givenLetter && answerArr[k] === "_") {
+      answerArr[k] = givenLetter;
+      remainingLetters--;
+      found = true;
+      e.target.classList.add("used");
+    }
+  }
+
+  if (!found && !wrongLetters.includes(givenLetter)) {
+    e.target.classList.add("used");
+  }
+
+  spanWord.textContent = answerArr.join(" ");
+
+  if (remainingLetters === 0) {
+    spanWord.textContent = answerArr.join(" ");
+
+    if (remainingLetters === 0) {
+      alert(`Congratulations! The word was ${word}.`);
+    }
+  }
 }
