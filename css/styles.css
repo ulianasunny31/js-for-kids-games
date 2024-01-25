@@ -24,18 +24,41 @@ img {
   padding: 5px;
 }
 
+.go-back-link {
+  padding: 5px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.blue-page {
+  background-color: #d3e0ea;
+  color: #54626e;
+}
+
+.beige-page {
+  background-color: #f4e9d4;
+  color: #6d523e;
+}
+
 /**
   |============================
   | HANGMAN STYLES
   |============================
 */
-
+.hang-body {
+  background-color: #5b544c;
+  padding-top: 10px;
+}
 .hanggame-container {
   background-color: #f7f3ee;
   border-radius: 8px;
   width: 60%;
   min-height: 450px;
-  margin: 30px auto 0;
+  margin: 15px auto 0;
   padding: 50px 70px 30px;
   display: flex;
   flex-direction: column;
@@ -48,50 +71,18 @@ img {
   align-items: center;
 }
 
-.word-input {
-  width: 45%;
-  height: 25px;
-  padding: 10px;
-  font-size: 18px;
-  border-radius: 3px;
-  color: #a76d18;
-  font-family: "Covered By Your Grace", cursive;
-  margin-bottom: 20px;
-}
-
-.btn-div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 7px;
-  margin-bottom: 50px;
-  width: 100%;
-}
-
-.guess-btn {
-  width: 40%;
-  height: 30px;
-  background-color: #d9904c;
-  color: #7a400a;
-  border: none;
-  border-radius: 4px;
-  font-weight: 700;
-  font-size: 13px;
-  font-family: "Covered By Your Grace", cursive;
-  cursor: pointer;
-}
-
 .restart-btn {
   width: 40%;
   height: 30px;
-  background-color: #f19d8a;
-  color: #97260d;
+  background-color: #97260d;
+  color: #efd4ce;
   border: none;
   border-radius: 4px;
   font-weight: 700;
   font-size: 13px;
   font-family: "Covered By Your Grace", cursive;
   cursor: pointer;
+  margin-bottom: 50px;
 }
 
 .hangman-name {
@@ -125,9 +116,50 @@ img {
   background-color: #f7f3ee;
 }
 
+.alphabet-list {
+  width: 250px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1px;
+  padding: 0;
+}
+
+.alphabet-list-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Rowdies", sans-serif;
+  cursor: pointer;
+  width: 35px;
+  height: 30px;
+  background-color: #a0957b;
+  border: 1px #2b261c solid;
+  border-radius: 3px;
+  transition: transform 0.2s, box-shadow 0.2s background-color 0.2s;
+}
+
+.alphabet-list-item:hover,
+.alphabet-list-item:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #c4b89a;
+}
+
+.wrong {
+  background-color: #4d1f0c;
+  color: #b5a98c;
+}
 /* media hangman */
 
 @media screen and (min-width: 768px) {
+  .hang-body {
+    padding-top: 15px;
+  }
+
   .hangman-name {
     font-size: 25px;
   }
@@ -145,6 +177,21 @@ img {
   .wrong-letters-span {
     font-size: 19px;
     padding: 9px;
+  }
+
+  .alphabet-list {
+    width: 320px;
+    gap: 2px;
+  }
+
+  .alphabet-list-item {
+    width: 42px;
+    height: 32px;
+  }
+
+  .go-back-link {
+    padding: 5px;
+    font-size: 18px;
   }
 }
 
@@ -198,6 +245,34 @@ img {
   .wrong-letters-span {
     font-size: 20px;
     padding: 9px;
+  }
+
+  .alphabet-list {
+    width: 380px;
+    gap: 2px;
+  }
+
+  .alphabet-list-item {
+    width: 45px;
+    height: 35px;
+  }
+
+  .go-back-link {
+    padding: 5px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .alphabet-list {
+    width: 400px;
+    gap: 2px;
+  }
+
+  .alphabet-list-item {
+    width: 48px;
+    height: 38px;
+    font-size: 22px;
   }
 }
 
