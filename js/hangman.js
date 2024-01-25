@@ -1,10 +1,10 @@
 import words from "./words-for-hangman.js";
 import {
-  inputForWords,
   spanWord,
-  form,
   restart,
   wrongLetterSpan,
+  alphabet,
+  liItems,
 } from "./declarations.js";
 
 const notVisible = "not-visible";
@@ -16,13 +16,10 @@ let word, answerArr, remainingLetters, wrongLetters;
 
 startNewGame();
 
-form.addEventListener("submit", function handleSubmit(e) {
-  e.preventDefault();
-  givenLetter = inputForWords.value;
-
-  if (!givenLetter || givenLetter === null || givenLetter.length !== 1) {
-    alert("Please enter only one character!");
-    return;
+alphabet.addEventListener("click", function clickOnLetter(e) {
+  if (e.target.tagName === "LI") {
+    givenLetter = e.target.textContent.toLowerCase();
+    console.log(givenLetter);
   }
 
   let found = false;
@@ -31,22 +28,23 @@ form.addEventListener("submit", function handleSubmit(e) {
       answerArr[k] = givenLetter;
       remainingLetters--;
       found = true;
+      e.target.classList.add("used");
     }
   }
 
   if (!found && !wrongLetters.includes(givenLetter)) {
-    wrongLetters.push(givenLetter);
+    e.target.classList.add("used");
   }
-  wrongLetterSpan.classList.replace(notVisible, visible);
-  wrongLetterSpan.textContent = wrongLetters.join(", ");
 
   spanWord.textContent = answerArr.join(" ");
 
   if (remainingLetters === 0) {
-    alert("You won!");
-  }
+    spanWord.textContent = answerArr.join(" ");
 
-  inputForWords.value = "";
+    if (remainingLetters === 0) {
+      alert(`Congratulations! The word was ${word}.`);
+    }
+  }
 });
 
 restart.addEventListener("click", function handleRestart() {
@@ -69,4 +67,11 @@ function startNewGame() {
   wrongLetters = [];
   createGameWord();
   remainingLetters = word.length;
+  removeClass();
+}
+
+function removeClass() {
+  liItems.forEach((li) => {
+    li.classList.remove("used");
+  });
 }

@@ -9,14 +9,21 @@ img {
   max-width: 100%;
 }
 
+.name-list {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
 .project-name {
   font-family: "Rowdies", sans-serif;
-  font-size: 25px;
+  font-size: 20px;
   color: #23541d;
+  margin-bottom: 15px;
 }
 
 .project-link {
   font-family: "Rowdies", sans-serif;
+  font-size: 19px;
   text-decoration: none;
   border-radius: 8px;
   background-color: #b2ceae;
@@ -24,6 +31,27 @@ img {
   padding: 5px;
 }
 
+@media screen and (min-width: 768px) {
+  .project-name {
+    font-size: 22px;
+  }
+
+  .project-link {
+    padding: 5px;
+    font-size: 21px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .project-name {
+    font-size: 25px;
+  }
+
+  .project-link {
+    padding: 5px;
+    font-size: 24px;
+  }
+}
 .go-back-link {
   padding: 5px;
   text-decoration: none;
@@ -65,12 +93,6 @@ img {
   align-items: center;
 }
 
-.hanggame-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .restart-btn {
   width: 40%;
   height: 30px;
@@ -82,30 +104,19 @@ img {
   font-size: 13px;
   font-family: "Covered By Your Grace", cursive;
   cursor: pointer;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .hangman-name {
-  margin: 0 auto 40px;
+  margin: 0 auto 38px;
   font-family: "Covered By Your Grace", cursive;
   font-size: 20px;
 }
 
 .word-span {
   font-family: "Covered By Your Grace", cursive;
-  font-size: 15px;
-  margin-bottom: 60px;
-}
-
-.wrong-letters-span {
-  font-family: "Covered By Your Grace", cursive;
-  font-size: 18px;
-  border: none;
-  border-radius: 3px;
-  padding: 8px;
-  min-width: 100px;
-  max-width: 100px;
-  max-height: 200px;
+  font-size: 17px;
+  margin-bottom: 35px;
 }
 
 .visible {
@@ -117,7 +128,7 @@ img {
 }
 
 .alphabet-list {
-  width: 250px;
+  width: 260px;
   list-style: none;
   display: flex;
   justify-content: center;
@@ -134,8 +145,8 @@ img {
   font-weight: 700;
   font-family: "Rowdies", sans-serif;
   cursor: pointer;
-  width: 35px;
-  height: 30px;
+  width: 40px;
+  height: 35px;
   background-color: #a0957b;
   border: 1px #2b261c solid;
   border-radius: 3px;
@@ -149,7 +160,7 @@ img {
   background-color: #c4b89a;
 }
 
-.wrong {
+.used {
   background-color: #4d1f0c;
   color: #b5a98c;
 }
@@ -161,32 +172,28 @@ img {
   }
 
   .hangman-name {
-    font-size: 25px;
+    font-size: 28px;
   }
 
-  .word-input {
-    width: 50%;
-    height: 30px;
-    font-size: 19px;
+  .restart-btn {
+    width: 100px;
+    height: 35px;
+    font-size: 15px;
   }
 
   .word-span {
-    font-size: 18px;
-  }
-
-  .wrong-letters-span {
-    font-size: 19px;
-    padding: 9px;
+    font-size: 20px;
+    margin-bottom: 38px;
   }
 
   .alphabet-list {
-    width: 320px;
+    width: 350px;
     gap: 2px;
   }
 
   .alphabet-list-item {
-    width: 42px;
-    height: 32px;
+    width: 54px;
+    height: 39px;
   }
 
   .go-back-link {
@@ -201,35 +208,6 @@ img {
     height: 65%;
     margin: 30px auto 0;
     padding: 80px 80px 30px;
-  }
-
-  .hanggame-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .word-input {
-    height: 35px;
-    font-size: 20px;
-  }
-
-  .btn-div {
-    flex-direction: row;
-    margin-bottom: 40px;
-    justify-content: center;
-  }
-
-  .guess-btn {
-    width: 100px;
-    height: 35px;
-    font-size: 15px;
-  }
-
-  .restart-btn {
-    width: 100px;
-    height: 35px;
-    font-size: 15px;
   }
 
   .hangman-name {
@@ -248,18 +226,18 @@ img {
   }
 
   .alphabet-list {
-    width: 380px;
+    width: 400px;
     gap: 2px;
   }
 
   .alphabet-list-item {
-    width: 45px;
-    height: 35px;
+    width: 62px;
+    height: 42px;
   }
 
   .go-back-link {
     padding: 5px;
-    font-size: 20px;
+    font-size: 22px;
   }
 }
 
@@ -283,6 +261,7 @@ img {
 */
 .tr-body {
   background-color: #f9fcfe;
+  padding-top: 10px;
 }
 
 .tr-container {
@@ -317,6 +296,10 @@ img {
 /* Media treasure */
 
 @media screen and (min-width: 768px) {
+  .tr-body {
+    padding-top: 15px;
+  }
+
   .tr-header {
     font-size: 30px;
   }
