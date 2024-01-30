@@ -1,17 +1,11 @@
 import words from "./words-for-hangman.js";
-import {
-  spanWord,
-  restart,
-  wrongLetterSpan,
-  alphabet,
-  liItems,
-} from "./declarations.js";
+import { spanWord, restart, alphabet, liItems, ctx } from "./declarations.js";
 
 const notVisible = "not-visible";
 const visible = "visible";
 
 let givenLetter = "";
-
+let wrongGuess = 0;
 let word, answerArr, remainingLetters, wrongLetters;
 
 startNewGame();
@@ -27,15 +21,14 @@ alphabet.addEventListener("click", function clickOnLetter(evt) {
 
 restart.addEventListener("click", function handleRestart() {
   startNewGame();
+  context.clearRect(0, 0, canvas.width, canvas.height);
 });
 
 function createGameWord() {
   for (let i = 0; i < word.length; i++) {
     answerArr.push("_");
     spanWord.textContent = answerArr.join(" ");
-    wrongLetterSpan.classList.replace(visible, notVisible);
     wrongLetters = [];
-    wrongLetterSpan.textContent = wrongLetters.join(", ");
   }
 }
 
@@ -68,6 +61,11 @@ function reactToClick(e) {
       found = true;
       e.target.classList.add("used");
     }
+
+    if (word[k] !== givenLetter) {
+      wrongGuess++;
+      drawTheMan(wrongGuess);
+    }
   }
 
   if (!found && !wrongLetters.includes(givenLetter)) {
@@ -82,5 +80,46 @@ function reactToClick(e) {
     if (remainingLetters === 0) {
       alert(`Congratulations! The word was ${word}.`);
     }
+  }
+}
+
+function drawTheMan(wrongGuess) {
+  ctx.lineWidth = 4;
+
+  switch (wrongGuess) {
+    case 0:
+      ctx.strokeRect(20, 20, 20, 20);
+      break;
+    case 1:
+      ctx.beginPath();
+      ctx.moveTo(30, 40);
+      ctx.lineTo(30, 80);
+      ctx.stroke();
+      break;
+    case 2:
+      ctx.beginPath();
+      ctx.moveTo(30, 80);
+      ctx.lineTo(10, 110);
+      ctx.stroke();
+      break;
+    case 3:
+      ctx.beginPath();
+      ctx.moveTo(30, 80);
+      ctx.lineTo(50, 110);
+      ctx.stroke();
+      break;
+    case 4:
+      ctx.beginPath();
+      ctx.moveTo(30, 60);
+      ctx.lineTo(10, 50);
+      ctx.stroke();
+      break;
+    case 5:
+      ctx.beginPath();
+      ctx.moveTo(30, 60);
+      ctx.lineTo(50, 50);
+      ctx.stroke();
+      break;
+    default:
   }
 }
