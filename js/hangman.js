@@ -1,9 +1,7 @@
 import words from "./words-for-hangman.js";
-import { spanWord, restart, alphabet, liItems, ctx } from "./declarations.js";
-
-const notVisible = "not-visible";
-const visible = "visible";
-
+import { spanWord, restart, alphabet, liItems } from "./declarations.js";
+const canvas = document.getElementById("canvas");
+export const ctx = canvas.getContext("2d");
 let givenLetter = "";
 let wrongGuess = 0;
 let word, answerArr, remainingLetters, wrongLetters;
