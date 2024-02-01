@@ -104,7 +104,11 @@ img {
   font-size: 13px;
   font-family: "Covered By Your Grace", cursive;
   cursor: pointer;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+}
+
+#canvas {
+  margin-left: 50px;
 }
 
 .hangman-name {
@@ -116,7 +120,7 @@ img {
 .word-span {
   font-family: "Covered By Your Grace", cursive;
   font-size: 17px;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
 }
 
 .visible {
@@ -135,6 +139,7 @@ img {
   flex-wrap: wrap;
   gap: 1px;
   padding: 0;
+  margin-top: 0;
 }
 
 .alphabet-list-item {
@@ -183,7 +188,7 @@ img {
 
   .word-span {
     font-size: 20px;
-    margin-bottom: 38px;
+    margin-bottom: 30px;
   }
 
   .alphabet-list {
@@ -215,14 +220,13 @@ img {
     font-size: 35px;
   }
 
-  .word-span {
-    font-size: 20px;
-    margin-bottom: 50px;
+  #canvas {
+    margin-left: 150px;
   }
 
-  .wrong-letters-span {
+  .word-span {
     font-size: 20px;
-    padding: 9px;
+    margin-bottom: 35px;
   }
 
   .alphabet-list {

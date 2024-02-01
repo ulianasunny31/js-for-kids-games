@@ -10,17 +10,17 @@ let word, answerArr, remainingLetters, wrongLetters;
 
 startNewGame();
 alphabet.addEventListener(
-  "touchstart",
+  "pointerdown",
   function touchOnLetter(evt) {
     reactToClick(evt);
   },
   { passive: true }
 );
 
-alphabet.addEventListener("click", function clickOnLetter(evt) {
-  evt.preventDefault();
-  reactToClick(evt);
-});
+// alphabet.addEventListener("click", function clickOnLetter(evt) {
+//   evt.preventDefault();
+//   reactToClick(evt);
+// });
 
 restart.addEventListener("click", function handleRestart() {
   startNewGame();
@@ -42,6 +42,7 @@ function startNewGame() {
   remainingLetters = word.length;
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   removeClass();
+  console.clear();
 }
 
 function removeClass() {
@@ -65,17 +66,24 @@ function reactToClick(e) {
       e.target.classList.add("used");
     }
   }
-  if (!found) {
+  if (!found && !wrongLetters.includes(givenLetter)) {
     wrongGuess += 1;
     drawTheMan(wrongGuess);
     if (wrongGuess === 9) {
       alert(`You lost! The word was ${word}.`);
-      startNewGame();
     }
   }
 
   if (!found && !wrongLetters.includes(givenLetter)) {
     e.target.classList.add("used");
+    wrongLetters.push(givenLetter);
+    if (!found && !wrongLetters.includes(givenLetter)) {
+      wrongGuess += 1;
+      drawTheMan(wrongGuess);
+      if (wrongGuess === 9) {
+        alert(`You lost! The word was ${word}.`);
+      }
+    }
   }
 
   spanWord.textContent = answerArr.join(" ");
@@ -85,6 +93,7 @@ function reactToClick(e) {
 
     if (remainingLetters === 0) {
       alert(`Congratulations! The word was ${word}.`);
+      startNewGame();
     }
   }
 }
