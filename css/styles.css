@@ -102,7 +102,7 @@ img {
   border-radius: 4px;
   font-weight: 700;
   font-size: 13px;
-  font-family: "Covered By Your Grace", cursive;
+  font-family: "Single Day", cursive;
   cursor: pointer;
   margin-bottom: 20px;
 }
@@ -113,12 +113,12 @@ img {
 
 .hangman-name {
   margin: 0 auto 38px;
-  font-family: "Covered By Your Grace", cursive;
+  font-family: "Single Day", cursive;
   font-size: 20px;
 }
 
 .word-span {
-  font-family: "Covered By Your Grace", cursive;
+  font-family: "Single Day", cursive;
   font-size: 17px;
   margin-bottom: 25px;
 }
@@ -216,6 +216,7 @@ img {
   }
 
   .hangman-name {
+    font-family: "Covered By Your Grace", cursive;
     margin: 0 auto 40px;
     font-size: 35px;
   }
@@ -225,6 +226,7 @@ img {
   }
 
   .word-span {
+    font-family: "Covered By Your Grace", cursive;
     font-size: 20px;
     margin-bottom: 35px;
   }
@@ -242,6 +244,10 @@ img {
   .go-back-link {
     padding: 5px;
     font-size: 22px;
+  }
+
+  .restart-btn {
+    font-family: "Covered By Your Grace", cursive;
   }
 }
 
