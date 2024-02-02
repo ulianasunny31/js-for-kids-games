@@ -102,7 +102,7 @@ img {
   border-radius: 4px;
   font-weight: 700;
   font-size: 13px;
-  font-family: "Single Day", cursive;
+  font-family: "Cute Font", sans-serif;
   cursor: pointer;
   margin-bottom: 20px;
 }
@@ -113,12 +113,12 @@ img {
 
 .hangman-name {
   margin: 0 auto 38px;
-  font-family: "Single Day", cursive;
+  font-family: "Cute Font", sans-serif;
   font-size: 20px;
 }
 
 .word-span {
-  font-family: "Single Day", cursive;
+  font-family: "Cute Font", sans-serif;
   font-size: 17px;
   margin-bottom: 25px;
 }
