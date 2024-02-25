@@ -4,7 +4,7 @@ const canvas = document.getElementById("canvas");
 export const ctx = canvas.getContext("2d");
 let givenLetter = "";
 let wrongGuess = 0;
-let word, answerArr, remainingLetters, wrongLetters;
+let word, answerArr, remainingLetters;
 
 startNewGame();
 
@@ -14,16 +14,8 @@ restart.addEventListener("click", function handleRestart() {
   startNewGame();
 });
 
-//Working functions
-//
 function touchOnLetter(e) {
-  console.log("Pointer down event triggered");
-  if (!isGameEnded()) {
-    console.log("Game not ended, reacting to click");
-    reactToClick(e);
-  } else {
-    console.log("Game already ended");
-  }
+  if (!isGameEnded()) reactToClick(e);
 }
 
 function createGameWord() {
@@ -35,7 +27,6 @@ function createGameWord() {
 }
 
 function startNewGame() {
-  console.log("starting new game");
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   word = words[Math.floor(Math.random() * words.length)];
   answerArr = [];
@@ -47,7 +38,6 @@ function startNewGame() {
   wrongGuess = 0;
   alphabet.removeEventListener("pointerdown", touchOnLetter);
   alphabet.addEventListener("pointerdown", touchOnLetter);
-  console.log("new game started");
 }
 
 function removeClass() {
@@ -71,10 +61,10 @@ function reactToClick(e) {
         e.target.classList.add("used");
       }
     });
-  } else if (!found && !wrongLetters.includes(givenLetter)) {
+  } else if (!found) {
     wrongGuess += 1;
     drawTheMan(wrongGuess);
-    wrongLetters.push(givenLetter);
+
     e.target.classList.add("used");
 
     if (wrongGuess === 9) {
