@@ -359,8 +359,6 @@ ul {
 
 #snake-canvas {
   background-color: #faf3e3;
-  width: 300px;
-  height: 300px;
 }
 
 .snake-container {
@@ -389,7 +387,7 @@ ul {
   display: none;
 }
 
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
   #snake-canvas {
     width: 350px;
     height: 350px;
@@ -405,7 +403,7 @@ ul {
 
 @media screen and (min-width: 1440px) {
   #snake-canvas {
-    width: 550px;
-    height: 550px;
+    width: 500px;
+    height: 500px;
   }
-}
+} */
