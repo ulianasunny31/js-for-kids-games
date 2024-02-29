@@ -7,20 +7,28 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body class="snake-body">
-    <a class="beige-page go-back-link" href="index.html">Go back</a>
+    <a class="green-page go-back-link" href="index.html">Go back</a>
+    <div class="flex">
+      <div class="game-intro">
+        <h2>Press Space to start!</h2>
 
-    <h3>Score:<span id="score-span">sdvsvsvsv</span></h3>
-    <div class="snake-container">
-      <canvas id="snake-canvas" width="400" height="400"> </canvas>
+      <h3 class="score-heading">Score: <span id="score-span"></span> points.</span></h3>
+     
     </div>
-    <div class="non-visible">
+      
+      <div class="snake-container">
+        <canvas id="snake-canvas" width="450" height="450"> </canvas>
+      </div>
+      <div></div>
+    </div>
+    <!-- <div class="non-visible">
       <ul class="keys-list">
         <li>UP</li>
         <li>DOWN</li>
         <li>RIGHT</li>
         <li>LEFT</li>
       </ul>
-    </div>
+    </div> -->
     <script type="module" src="./js/snakie.js"></script>
   </body>
 </html>

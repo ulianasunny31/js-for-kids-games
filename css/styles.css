@@ -55,6 +55,7 @@ ul {
     font-size: 24px;
   }
 }
+
 .go-back-link {
   padding: 5px;
   text-decoration: none;
@@ -73,6 +74,11 @@ ul {
 .beige-page {
   background-color: #f4e9d4;
   color: #6d523e;
+}
+
+.green-page {
+  background-color: #6b8e71;
+  color: #ffffff;
 }
 
 /**
@@ -351,19 +357,45 @@ ul {
 */
 
 .snake-body {
-  background-color: #f8fae3;
+  background-color: #bad1c2;
+  padding: 10px;
+}
+
+.score-heading,
+#score-span {
+  font-family: "Rowdies", sans-serif;
+  font-size: 35px;
 }
 
 #score-span {
+  color: #215b63;
 }
 
 #snake-canvas {
-  background-color: #faf3e3;
+  background-color: #fefcf7;
 }
 
 .snake-container {
   display: flex;
   justify-content: center;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 70px;
+}
+
+.game-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-intro h2 {
+  color: #b8405e;
 }
 
 .keys-list {
@@ -386,24 +418,3 @@ ul {
 .non-visible {
   display: none;
 }
-
-/* @media screen and (min-width: 768px) {
-  #snake-canvas {
-    width: 350px;
-    height: 350px;
-  }
-}
-
-@media screen and (min-width: 1158px) {
-  #snake-canvas {
-    width: 450px;
-    height: 450px;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  #snake-canvas {
-    width: 500px;
-    height: 500px;
-  }
-} */
