@@ -198,6 +198,7 @@ function restartAll() {
   apple.reset();
   snakie.reset();
   doTheGame();
+  score = 0;
 }
 
 //the game
