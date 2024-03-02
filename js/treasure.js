@@ -18,7 +18,12 @@ $(mapImage).click(function (evt) {
   }
 
   if (distance < 13) {
-    alert(`Found the treasure in ${clicks} clicks!`);
+    if (clicks === 1) {
+      alert(`Found the treasure in ${clicks} click!`);
+    } else {
+      alert(`Found the treasure in ${clicks} clicks!`);
+    }
+
     startNewGame();
   }
 

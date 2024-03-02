@@ -415,6 +415,27 @@ ul {
   margin: 20px auto;
 }
 
-.non-visible {
-  display: none;
+.message {
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+.message h1 {
+  background-color: #f7f3ee;
+  text-align: center;
+  width: 400px;
+  padding: 12px;
+}
+
+@media screen and (max-width: 1157px) {
+  .flex {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .message {
+    display: none;
+  }
 }
