@@ -8,15 +8,15 @@ The games are:
 
 <h2>Features</h2>
 <ul style='list-style:none;'>
-<li> 1. Hangman
+<li> 1. Hangman<br>
 Device Compatibility: Available on any device.<br>
 On-Screen Keyboard: Interactive on-screen keyboard for making guesses.<br>
 Animation: Hangman animation with each wrong guess.<br></li>
-<li>2. Find the Treasure
+<li>2. Find the Treasure<br>
 Device Compatibility: Available on any device.<br>
 Interactive Gameplay: Click on the picture to find the hidden treasure.<br>
 Counters: Tracks the number of clicks remaining and the number of clicks taken to find the treasure.<br></li>
-<li>3. Snake
+<li>3. Snake<br>
 Device Compatibility: Available only on large screens (requires a keyboard).<br>
 Classic Gameplay: Snake eats an apple and grows longer.<br>
 Points Counter: Tracks the player's score.<br>
