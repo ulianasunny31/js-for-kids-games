@@ -7,18 +7,18 @@ The games are:
 <h3>Snake: The well-known snake game where the snake grows longer as it eats apples, and the goal is to avoid collisions.</h3><br>
 
 <h2>Features</h2>
-<ul style="list-style: none; padding: 0;">
-<li> 1. Hangman<br>
+<ol  >
+<li>Hangman<br>
 Device Compatibility: Available on any device.<br>
 On-Screen Keyboard: Interactive on-screen keyboard for making guesses.<br>
 Animation: Hangman animation with each wrong guess.<br></li>
-<li>2. Find the Treasure<br>
+<li>Find the Treasure<br>
 Device Compatibility: Available on any device.<br>
 Interactive Gameplay: Click on the picture to find the hidden treasure.<br>
 Counters: Tracks the number of clicks remaining and the number of clicks taken to find the treasure.<br></li>
-<li>3. Snake<br>
+<li>Snake<br>
 Device Compatibility: Available only on large screens (requires a keyboard).<br>
 Classic Gameplay: Snake eats an apple and grows longer.<br>
 Points Counter: Tracks the player's score.<br>
 Avoid Collisions: The task is to avoid bumping into walls or the snake itself.<br></li>
-</ul>
+</ol>
