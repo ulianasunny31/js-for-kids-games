@@ -7,7 +7,7 @@ The games are:
 <h3>Snake: The well-known snake game where the snake grows longer as it eats apples, and the goal is to avoid collisions.</h3><br>
 
 <h2>Features</h2>
-<ul style='list-style:none;'>
+<ul style="list-style: none; padding: 0;">
 <li> 1. Hangman<br>
 Device Compatibility: Available on any device.<br>
 On-Screen Keyboard: Interactive on-screen keyboard for making guesses.<br>
